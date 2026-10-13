@@ -1,0 +1,65 @@
+.site-header a:focus-visible,.paper-button:focus-visible,.mobile-nav summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.work-hero__foot{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}.hand-note{margin:0 6vw 2px 0;color:var(--moss);font:1.35rem/1 var(--hand);transform:rotate(-4deg)}
+.work-index__intro{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--line)}.work-index__intro-text{max-width:34ch;margin:12px 0 0;color:var(--muted);font:1.2rem/1.25 var(--serif)}.work-index__count{margin:0;color:var(--muted);font-size:.7rem;line-height:1.5;text-align:right;text-transform:uppercase;letter-spacing:.12em}
+.work-index{display:grid;gap:28px;padding-bottom:110px}.case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.project-card{display:grid;grid-template-columns:1fr;gap:24px;align-items:start;min-width:0;padding:22px;text-decoration:none;border:1px solid var(--line);background:rgba(231,235,229,.52)}.project-card--featured{position:relative;height:100%;background:var(--field);cursor:pointer;transition:transform 220ms ease,box-shadow 220ms ease}.project-card--featured:hover{transform:translateY(-5px);box-shadow:10px 10px 0 rgba(32,40,36,.13)}.project-card--featured:focus-visible{outline:3px solid var(--blue);outline-offset:5px}.project-card__image{position:relative;padding:12px;background:#fff;transform:rotate(-1deg)}.project-card__image img{display:block;width:100%;aspect-ratio:1.35;object-fit:cover}.image-note{position:absolute;z-index:1;right:18px;top:-18px;color:var(--moss);font:1.1rem/1 var(--hand);text-align:center;transform:rotate(3deg)}.project-card__copy h2,.project-card--coming h2{margin:8px 0 14px;font:500 clamp(2.35rem,3.5vw,3.7rem)/.92 var(--serif);letter-spacing:-.055em}.project-card__copy>p:not(.section-label),.project-card--coming p:not(.section-label){max-width:48ch;color:var(--muted)}.project-card__signals{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}.project-card__signals span{padding:6px 9px;border:1px solid rgba(32,40,36,.28);color:var(--moss);font-size:.6rem;font-weight:600;letter-spacing:.1em}.project-link{display:inline-block;margin-top:20px;color:var(--moss);font-size:.78rem;font-weight:600;text-underline-offset:6px}.project-list{display:grid;gap:0;border-top:1px solid var(--line)}.project-card--coming{grid-template-columns:44px 1fr auto;gap:24px;min-height:190px;padding:28px 0;border:0;border-bottom:1px solid var(--line);background:transparent}.project-card--ready{grid-template-columns:1fr;gap:20px;height:100%;padding:22px;background:var(--field);border:1px solid var(--line);align-items:start}.project-card--ready .project-number{order:-1}.project-card--ready .project-card__thumb{padding:8px;background:#fff;transform:rotate(1.5deg)}.project-card--ready .project-card__thumb img{display:block;width:100%;aspect-ratio:1.35;object-fit:cover}.project-card--ready h2{font-size:clamp(2.35rem,3.5vw,3.7rem)}.project-card--ready:hover{background:var(--field);transform:translateY(-5px);box-shadow:10px 10px 0 rgba(32,40,36,.13)}.project-card--coming h2{font-size:clamp(2.3rem,4vw,4.2rem)}.project-number{color:var(--moss);font:1.1rem var(--hand);padding-top:7px}.project-status{align-self:start;padding:8px 10px;border:1px solid var(--line);color:var(--muted);font-size:.64rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}.project-card__image--cutout{background:#f9faf5}.project-card__image--cutout img{aspect-ratio:1.35;object-fit:contain;object-position:center;padding:18px}
+@media(max-width:760px){.work-hero__foot,.work-index__intro{display:block}.hand-note{margin:22px 0 0}.work-index__count{margin-top:18px;text-align:left}.case-grid{grid-template-columns:1fr}.project-card,.project-card--coming{grid-template-columns:1fr;padding:20px}.project-card--featured{gap:34px}.image-note{right:12px;top:-16px}.project-card--coming{gap:7px;min-height:0;padding:26px 0}.project-number{padding:0}.project-status{justify-self:start;margin-top:9px}}
+@media(prefers-reduced-motion:reduce){.project-card--featured{transition:none}.project-card--featured:hover{transform:none}}
+
+/* Shared case-card language: every live case is equally legible and clearly
+   clickable. Motion stays editorial and quiet, so the page remains readable
+   while the pointer still gets a useful invitation. */
+.case-grid .project-card--featured{cursor:pointer}
+.case-grid .project-card--featured:nth-child(1){background:#e7ebe5}
+.case-grid .project-card--featured:nth-child(2){background:#e4ebed}
+.case-grid .project-card--featured:nth-child(3){background:#eee8dc}
+.motion-ready .case-grid .project-card--featured{opacity:0;transform:translateY(18px);transition:opacity 480ms ease var(--post-delay),transform 480ms cubic-bezier(.2,.8,.25,1) var(--post-delay),box-shadow 220ms ease,background-color 220ms ease}
+.motion-ready .case-grid .project-card--featured.is-visible{opacity:1;transform:none}
+.case-grid .project-card--featured .project-card__image,
+.case-grid .project-card--featured .project-card__thumb{transition:transform 320ms cubic-bezier(.22,.61,.36,1)}
+.case-grid .project-card--featured:hover .project-card__image{transform:rotate(-1deg) scale(1.012)}
+.case-grid .project-card--featured:hover .project-card__thumb{transform:rotate(1.5deg) scale(1.012)}
+.case-grid .project-card--featured .project-link{cursor:pointer}
+.case-grid .project-card--featured .project-link span{display:inline-block;transition:transform 220ms ease}
+.case-grid .project-card--featured:hover .project-link span{transform:translate(3px,-3px)}
+.case-grid .project-card--featured:hover .project-card__image img,
+.case-grid .project-card--featured:hover .project-card__thumb img{transform:scale(1.025)}
+.case-grid .project-card--ready .project-card__thumb{padding:12px;background:#fff;transform:rotate(1.5deg)}
+.case-grid .project-card--ready .project-card__thumb img{display:block;width:100%;height:100%;object-fit:cover}
+.case-grid .project-card--ready:hover{transform:translateY(-5px);box-shadow:10px 10px 0 rgba(32,40,36,.13)}
+@media(prefers-reduced-motion:reduce){
+  .motion-ready .case-grid .project-card--featured{opacity:1;transform:none;transition:none}
+  .case-grid .project-card--featured .project-card__image,
+  .case-grid .project-card--featured .project-card__thumb,
+  .case-grid .project-card--featured .project-link span{transition:none}
+  .case-grid .project-card--ready:hover{transform:none}
+}
+
+/* Keep project imagery scannable: the image, title, and context belong to the
+   same visible card. The wrapper owns the crop so source-image dimensions
+   cannot stretch the layout. */
+.case-grid .project-card__image,
+.case-grid .project-card__thumb{aspect-ratio:16 / 9;overflow:hidden}
+.case-grid .project-card__image img,
+.case-grid .project-card--ready .project-card__thumb img{width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){.case-grid .project-card__image,.case-grid .project-card__thumb{aspect-ratio:1.42}.case-grid .project-card--featured{padding:16px;gap:16px}.case-grid .project-card__copy h2,.case-grid .project-card--ready h2{font-size:clamp(1.8rem,7.2vw,2.45rem);line-height:.98}.case-grid .project-card__copy>p:not(.section-label){font-size:.94rem;line-height:1.48}.case-grid .project-card__signals{margin-top:16px}.case-grid .project-link{margin-top:14px;font-size:.72rem}}
+
+/* Desktop case index: horizontal editorial rows make each project legible at a
+   glance and keep the image/title relationship clear. */
+.case-grid{grid-template-columns:1fr;gap:22px}
+.case-grid .project-card--featured{grid-template-columns:minmax(280px,42%) minmax(0,1fr);gap:34px;align-items:center}
+.case-grid .project-card--featured{min-height:372px}
+.case-grid .project-card--ready{grid-template-columns:minmax(280px,42%) minmax(0,1fr);gap:34px;align-items:center}
+.case-grid .project-card--reverse .project-card__thumb{order:2}
+.case-grid .project-card--reverse .project-card__copy{order:1}
+.case-grid .project-card--ready .project-number{order:initial}
+.case-grid .project-card__image,
+.case-grid .project-card__thumb{aspect-ratio:16 / 10}
+.case-grid .project-card__copy h2,
+.case-grid .project-card--ready h2{font-size:clamp(2rem,3vw,3.25rem)}
+@media(max-width:760px){
+  .case-grid .project-card--featured,
+  .case-grid .project-card--ready{grid-template-columns:1fr;gap:18px;min-height:0}
+  .case-grid .project-card--reverse .project-card__thumb,
+  .case-grid .project-card--reverse .project-card__copy{order:initial}
+  .case-grid .project-card__image,
+  .case-grid .project-card__thumb{aspect-ratio:4 / 3}
+}

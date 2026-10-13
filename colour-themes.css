@@ -1,0 +1,112 @@
+/*
+  Colour comparison only. Layout, typography, images and copy remain identical
+  so the review isolates the effect of the palette.
+*/
+
+.theme-a {
+  --paper: #f7f7f2;
+  --paper-cool: #edf1eb;
+  --ink: #26302b;
+  --ink-soft: #5e6a62;
+  /* Plant green is now a quiet structural colour, not a saturated blue substitute. */
+  --blue: #5f725d;
+  --blue-soft: #e4e9e2;
+  --periwinkle: #e9e1d4;
+  --mint: #dbe3d8;
+  --lime: #f1e4bd;
+  --pink: #f2ddd5;
+  /* One warm accent drawn from the photographs' apricot/coral notes. */
+  --apricot: #bd684f;
+  --yellow: #d9b884;
+  --line: rgba(38, 48, 43, 0.18);
+  --shadow: 0 16px 38px rgba(38, 48, 43, 0.09);
+}
+
+.theme-a .field-note {
+  border-color: rgba(95, 114, 93, 0.42);
+}
+
+.theme-a .field-note::before {
+  background: repeating-linear-gradient(
+    transparent 0 31px,
+    rgba(95, 114, 93, 0.13) 31px 32px
+  );
+}
+
+.theme-a .family-note blockquote {
+  box-shadow: 12px 12px 0 rgba(95, 114, 93, 0.18);
+}
+
+/* Keep the manifesto calm and readable instead of introducing a second dark colour block. */
+.theme-a .manifesto {
+  background: var(--paper-cool);
+  color: var(--ink);
+}
+
+.theme-a .manifesto .section-number {
+  color: var(--apricot);
+}
+
+.theme-a .manifesto-grid > div > p {
+  color: var(--ink-soft);
+}
+
+.theme-a .manifesto h2 span::after {
+  border-bottom-color: var(--apricot);
+}
+
+/* Reserve the deepest tone for the genuinely closing, high-contrast footer moment. */
+.theme-a .thing-3 {
+  background: var(--ink);
+}
+
+.theme-a .thing-6 {
+  background: var(--lime);
+}
+
+.theme-d {
+  --paper: #faf7f2;
+  --paper-cool: #f1ece5;
+  --ink: #2d2928;
+  --ink-soft: #625b57;
+  --blue: #7b4a52;
+  --blue-soft: #eadadd;
+  --periwinkle: #e1c4c1;
+  --mint: #cbd0ad;
+  --lime: #e8d58f;
+  --pink: #e8c6bc;
+  --apricot: #c8765d;
+  --yellow: #ecd88e;
+  --line: rgba(45, 41, 40, 0.2);
+  --shadow: 0 18px 45px rgba(63, 45, 42, 0.12);
+}
+
+.theme-d .field-note {
+  border-color: rgba(123, 74, 82, 0.28);
+}
+
+.theme-d .field-note::before {
+  background: repeating-linear-gradient(
+    transparent 0 31px,
+    rgba(123, 74, 82, 0.09) 31px 32px
+  );
+}
+
+.theme-d .family-note blockquote {
+  box-shadow: 12px 12px 0 rgba(123, 74, 82, 0.16);
+}
+
+.theme-label {
+  position: fixed;
+  z-index: 30;
+  right: 18px;
+  bottom: 18px;
+  padding: 9px 13px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid currentColor;
+  font: 600 0.68rem/1 "DM Sans", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
